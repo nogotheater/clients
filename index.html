@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>㈜지슨 주요 고객사 · 2026년 7월</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* ════════════════════════════════════════════════════════════
+지슨 디자인 시스템 v1.7 적용
+1층 Primitive → 2층 Semantic → 3층 Component 순서로 정의.
+3층 값은 반드시 2층을 참조 (예외: 제품 식별색 — 맨 아래 별도 표기)
+════════════════════════════════════════════════════════════ */
+:root{
+/* ── 1층 Primitive ─────────────────────────────── */
+--blue-50:#E8F2FD; --blue-100:#C9E3FC; --blue-200:#A9D4FA; --blue-300:#84BFF9; --blue-400:#62A8F8;
+--blue-500:#408DF4; --blue-600:#256FEF; --blue-700:#1A45A3; --blue-800:#0B1F5C; --blue-850:#121F34; --blue-900:#060E2E;
+--gray-0:#FFFFFF; --gray-50:#F3F5F8; --gray-100:#EEF1F5; --gray-150:#E6E9EE; --gray-200:#D9DEE4; --gray-300:#C3CAD2;
+--gray-400:#9AA3AD; --gray-500:#8A939D; --gray-600:#6B7580; --gray-700:#565E68; --gray-750:#3F4753;
+--gray-800:#2A323E; --gray-850:#1E2530; --gray-900:#161C25; --gray-950:#0F141B;
+/* ── 2층 Semantic (라이트) ─────────────────────── */
+--surface-page:var(--gray-50);
+--surface-default:var(--gray-0);
+--surface-muted:var(--gray-100);
+--surface-brand-tint:var(--blue-50);
+--text-primary:var(--gray-950);
+--text-secondary:var(--gray-700);
+--text-muted:var(--gray-600);
+--text-disabled:var(--gray-400);
+--text-brand:var(--blue-600);
+--text-brand-strong:var(--blue-800);
+--border-default:var(--gray-200);
+--border-strong:var(--gray-300);
+--border-brand:var(--blue-600);
+--fill-brand:var(--blue-600);
+--fill-brand-hover:var(--blue-700);
+--on-brand:var(--gray-0);
+/* ── 서체 ───────────────────────────────────────── */
+--font-body:"Pretendard Variable",Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+--font-latin:Heebo,var(--font-body);          /* 독립 영문 · 숫자: +2%, 자간 −0.01em */
+/* ── 간격 (2mm = 8px) · 괘선 · 반경 ─────────────── */
+--sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px; --sp-6:48px; --sp-8:64px; --sp-12:96px;
+--rule-thin:1px solid var(--border-default);   /* 0.5pt 행 구분 */
+--rule-strong:1px solid var(--text-primary);   /* 1pt 그룹 머리 · 표의 위아래 */
+--radius:8px;                                   /* 2mm 하나 */
+/* ── 3층 Component ──────────────────────────────── */
+--tile-bg:var(--surface-default);        --tile-border:var(--border-default);
+--tile-bg-on:var(--surface-brand-tint);  --tile-border-on:var(--border-brand);  --tile-text-on:var(--text-brand-strong);
+--tab-underline-on:var(--border-brand);  --tab-text-on:var(--text-brand-strong);
+--cell-bg:var(--surface-default);        --cell-rule:var(--gray-150);   /* 화면용 행선: border-default보다 한 단계 연하게 */
+--logo-bg:var(--surface-muted);          --logo-text:var(--text-primary);
+/* ── 예외: 제품 식별색 — PDF 고객사 리스트 · Excel 마크 색과 동일. 시스템 램프 밖 (결정 필요) ── */
+--mark-I:#1E2A78; --mark-S:#007AFF; --mark-B:#4A5FD9; --mark-D:#00A3E0; --mark-P:#0AB646; --mark-H:#1CB8D1; --mark-C:#CB2531;
+--wrap:1240px;
+--cols:5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+margin:0;background:var(--surface-page);color:var(--text-primary);
+font-family:var(--font-body);font-size:16px;line-height:1.65;font-weight:400;
+word-break:keep-all;
+}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--border-brand);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--sp-3)}
+/* 독립 영문 · 숫자 = Heebo (+2%, −0.01em) */
+.latin,.num{font-family:var(--font-latin);letter-spacing:-0.01em}
+/* ── 크기 단계 ─────────────────────────────────────── */
+.t-hero{font-family:var(--font-latin);font-size:80px;font-weight:600;line-height:1;letter-spacing:-0.02em}
+.t-title{font-size:32px;font-weight:700;line-height:1.25;letter-spacing:-0.02em}
+.t-subtitle{font-size:22px;font-weight:600;line-height:1.35;letter-spacing:0}
+.t-strong{font-size:18px;font-weight:700;line-height:1.45}
+.t-label{font-size:16px;font-weight:400;line-height:1.5;color:var(--text-secondary)}
+.t-caption{font-size:13px;font-weight:400;line-height:1.7;color:var(--text-muted)}
+.t-seclabel{font-family:var(--font-latin);font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted)}
+/* ── page-header 부품: 1pt 괘선 · 좌 섹션 라벨 · 우 번호 ── */
+.pagehead{background:var(--surface-default)}
+.pagehead .rule{display:flex;justify-content:space-between;align-items:baseline;padding:var(--sp-2) 0 var(--sp-1);border-bottom:var(--rule-strong)}
+.pagehead .rule .num{font-family:var(--font-latin);font-size:18px;font-weight:500;letter-spacing:-0.01em;color:var(--text-primary)}
+/* ── masthead: 제목 + hero 숫자 ── */
+.masthead{background:var(--surface-default);padding:var(--sp-4) 0 var(--sp-4)}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-4);flex-wrap:wrap}
+.masthead h1{margin:0}
+.masthead h1 .t-title{display:block}
+.masthead h1 .t-label{display:block;margin-top:var(--sp-1)}
+.hero{display:flex;align-items:baseline;gap:6px;color:var(--text-primary)}
+.hero .t-label{color:var(--text-secondary)}
+/* ── 제품 타일 ─────────────────────────────────────── */
+.products{background:var(--surface-default);padding:0 0 var(--sp-4);border-bottom:var(--rule-thin)}
+.products .head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--sp-2);margin-bottom:var(--sp-1)}
+.products .head h2{margin:0;font-size:16px;font-weight:400;color:var(--text-secondary)}
+.clear{background:none;border:0;padding:4px 0;font-size:13px;color:var(--text-brand);text-decoration:underline;text-underline-offset:3px;visibility:hidden}
+.clear.show{visibility:visible}
+.tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:var(--sp-1)}
+.tile{
+display:flex;align-items:center;gap:10px;
+padding:12px 14px;border:1px solid var(--tile-border);border-radius:var(--radius);background:var(--tile-bg);
+text-align:left;transition:border-color .12s,background-color .12s;
+}
+.tile:hover{border-color:var(--border-strong)}
+.tile .mk{flex:none}
+.tile .t-name{font-family:var(--font-latin);font-size:13px;letter-spacing:-0.01em;color:var(--text-secondary);line-height:1.3}
+.tile .t-count{font-family:var(--font-latin);font-size:22px;font-weight:600;letter-spacing:-0.01em;line-height:1.15;color:var(--text-primary)}
+.tile .t-count small{font-family:var(--font-body);font-size:12px;font-weight:400;letter-spacing:0;color:var(--text-muted);margin-left:2px}
+.tile[aria-pressed="true"]{background:var(--tile-bg-on);border-color:var(--tile-border-on)}
+.tile[aria-pressed="true"] .t-name,.tile[aria-pressed="true"] .t-count{color:var(--tile-text-on)}
+.tile.zero{opacity:.45}
+/* 제품 마크 */
+.mk{
+display:inline-flex;align-items:center;justify-content:center;
+width:18px;height:18px;border-radius:50%;
+font-family:var(--font-latin);font-size:10.5px;font-weight:700;color:var(--gray-0);line-height:1;letter-spacing:0;
+background:var(--pc,var(--text-secondary));
+}
+.mk-I{--pc:var(--mark-I)} .mk-S{--pc:var(--mark-S)} .mk-B{--pc:var(--mark-B)} .mk-D{--pc:var(--mark-D)}
+.mk-P{--pc:var(--mark-P)} .mk-H{--pc:var(--mark-H)} .mk-C{--pc:var(--mark-C)}
+/* ── 분류 탭 (sticky) ──────────────────────────────── */
+.catbar{position:sticky;top:0;z-index:5;background:var(--surface-default);border-bottom:var(--rule-thin)}
+.catbar .wrap{display:flex;align-items:center;gap:var(--sp-3)}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+flex:none;display:flex;align-items:baseline;gap:6px;
+padding:14px 12px 12px;border:0;background:none;border-bottom:2px solid transparent;margin-bottom:-1px;
+font-size:16px;color:var(--text-secondary);white-space:nowrap;
+}
+.tab b{font-weight:500;color:var(--text-primary)}
+.tab .n{font-family:var(--font-latin);font-size:13px;letter-spacing:-0.01em;color:var(--text-muted)}
+.tab[aria-pressed="true"]{border-bottom-color:var(--tab-underline-on)}
+.tab[aria-pressed="true"] b{color:var(--tab-text-on)}
+.tab[aria-pressed="true"] .n{color:var(--text-brand)}
+.tab.zero b{color:var(--text-disabled)}
+.search{position:relative;flex:none}
+.search input{
+width:220px;height:38px;padding:0 12px 0 34px;border:1px solid var(--border-default);border-radius:var(--radius);background:var(--surface-muted);
+font:inherit;font-size:16px;color:var(--text-primary);
+}
+.search input::placeholder{color:var(--text-disabled)}
+.search input:focus{outline:none;border-color:var(--border-brand);background:var(--surface-default)}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--text-disabled);pointer-events:none}
+/* ── 결과 요약 ── */
+.summary{padding:var(--sp-3) 0 0;font-size:16px;line-height:1.5;color:var(--text-secondary);min-height:24px}
+.summary b{font-family:var(--font-latin);font-weight:600;letter-spacing:-0.01em;color:var(--text-primary)}
+/* ── 섹션 · 그리드 ─────────────────────────────────── */
+.section{padding:var(--sp-4) 0 0}
+.section > h2{display:flex;align-items:baseline;gap:var(--sp-1);margin:0 0 10px;font-size:22px;font-weight:600;line-height:1.35}
+.section > h2 .n{font-family:var(--font-latin);font-size:22px;font-weight:500;letter-spacing:-0.01em;color:var(--text-secondary)}
+.section > h2 .of{font-family:var(--font-latin);font-size:16px;font-weight:400;letter-spacing:-0.01em;color:var(--text-muted)}
+.region{margin-top:var(--sp-3)}
+.region h3{display:flex;align-items:baseline;gap:6px;margin:0 0 var(--sp-1);font-size:18px;font-weight:700;line-height:1.45;color:var(--text-primary)}
+.region h3 .n{font-family:var(--font-latin);font-size:16px;font-weight:400;letter-spacing:-0.01em;color:var(--text-muted)}
+/* 표 괘선: 세로선 없음 · 가로 행선만(hairline) · 그룹 머리에 1pt 한 줄 */
+.grid{
+display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));
+border-top:var(--rule-strong);
+}
+.cell{
+display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+min-height:150px;padding:var(--sp-3) var(--sp-3);background:var(--cell-bg);
+border-bottom:1px solid var(--cell-rule);
+}
+.logo{
+width:44px;height:44px;border-radius:50%;background:var(--logo-bg);
+display:flex;align-items:center;justify-content:center;
+font-size:15px;font-weight:500;color:var(--logo-text);
+}
+.logo.flag{font-size:26px;background:none}
+.logo.img{background:none;border-radius:0;object-fit:contain}
+.cell .name{margin:0;font-size:16px;font-weight:400;line-height:1.5;text-align:center;max-width:100%}
+.cell .marks{display:flex;gap:4px;margin-top:2px}   /* 세로선이 없으므로 마크는 기관명 아래 중앙에 */
+.cell .marks .mk{width:16px;height:16px;font-size:9.5px}
+.cell .marks .mk.dim{opacity:.28}
+.confidential{border:1px dashed var(--border-strong);border-radius:var(--radius);padding:var(--sp-3);display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);flex-wrap:wrap;color:var(--text-secondary);font-size:15px;background:var(--surface-default)}
+.confidential b{color:var(--text-primary);font-weight:600}
+.confidential .pc{display:flex;gap:12px;flex-wrap:wrap}
+.confidential .pc span{display:inline-flex;align-items:center;gap:5px;font-size:14px}
+.confidential .pc .n{font-family:var(--font-latin);letter-spacing:-0.01em;color:var(--text-primary)}
+.empty{padding:var(--sp-8) 0;text-align:center;color:var(--text-secondary)}
+.empty p{margin:0 0 var(--sp-2)}
+.empty button{border:0;background:var(--fill-brand);color:var(--on-brand);border-radius:var(--radius);padding:10px 16px;font-size:16px}
+.empty button:hover{background:var(--fill-brand-hover)}
+footer{margin-top:var(--sp-8);padding:var(--sp-3) 0 var(--sp-6);border-top:var(--rule-thin);color:var(--text-muted);font-size:13px;line-height:1.7}
+footer .wrap{display:flex;justify-content:space-between;gap:var(--sp-2);flex-wrap:wrap}
+/* ── 반응형 ─────────────────────────────────────────── */
+@media (max-width:1100px){:root{--cols:4}.tiles{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:860px){
+:root{--cols:3}
+.t-hero{font-size:56px}
+.t-title{font-size:28px}
+.tiles{grid-template-columns:repeat(3,1fr)}
+.catbar .wrap{gap:10px}
+.search input{width:150px}
+}
+@media (max-width:560px){
+:root{--cols:1}
+.wrap{padding:0 var(--sp-2)}
+.masthead{padding:var(--sp-3) 0}
+.masthead .wrap{align-items:flex-start;flex-direction:column;gap:var(--sp-2)}
+.tiles{grid-template-columns:repeat(2,1fr)}
+.tile{padding:10px 12px}
+.catbar .wrap{flex-wrap:wrap;padding-bottom:10px}
+.search{width:100%}.search input{width:100%}
+/* 리스트형: 로고 · 기관명 · 마크 한 줄 */
+.cell{flex-direction:row;justify-content:flex-start;gap:12px;min-height:0;padding:12px 4px 12px 2px}
+.grid{border-top-color:var(--border-strong)}
+.logo{width:34px;height:34px;font-size:13px;flex:none}
+.logo.flag{font-size:22px}
+.cell .name{flex:1;text-align:left}
+.cell .marks{flex:none;gap:4px;margin:0;padding-left:var(--sp-1)}
+.cell .marks .mk{width:18px;height:18px;font-size:10.5px}
+.section > h2{font-size:20px}
+.region h3{margin-bottom:4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{
+body{background:#fff;font-size:12px}
+.catbar{position:static}
+.search,.clear{display:none}
+.tile,.cell{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="pagehead">
+<div class="wrap">
+<div class="rule">
+<span class="t-seclabel">GITSN · Client List</span>
+<span class="num" id="basis-dot">2026.07</span>
+</div>
+</div>
+</header>
+<section class="masthead">
+<div class="wrap">
+<h1>
+<span class="t-title">주요 고객사</span>
+<span class="t-label">중앙정부·공공기관·지자체·금융·교육·해외·민간에 걸친 납품 실적입니다.</span>
+</h1>
+<p class="hero"><span class="t-hero" id="total-count">492</span><span class="t-label">개 기관</span></p>
+</div>
+</section>
+<section class="products" aria-labelledby="products-h">
+<div class="wrap">
+<div class="head">
+<h2 id="products-h">제품별로 보기 <span class="t-caption">여러 개 선택 가능</span></h2>
+<button class="clear" id="clear-products" type="button">제품 선택 해제</button>
+</div>
+<div class="tiles" id="tiles" role="group" aria-label="제품 필터"></div>
+</div>
+</section>
+<nav class="catbar" aria-label="고객사 분류">
+<div class="wrap">
+<div class="tabs" id="tabs" role="group" aria-label="분류 필터 (여러 개 선택 가능)"></div>
+<label class="search">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+<input id="q" type="search" placeholder="기관명 검색" autocomplete="off" aria-label="기관명 검색">
+</label>
+</div>
+</nav>
+<main class="wrap">
+<noscript><p class="summary">미리보기에서는 제품·분류 필터가 동작하지 않습니다. 웹 주소로 열면 필터와 검색을 쓸 수 있습니다.</p></noscript>
+<p class="summary" id="summary" aria-live="polite"></p>
+<div id="sections"></div>
+</main>
+<footer>
+<div class="wrap">
+<span>㈜지슨 · 주요 고객사 목록 · <span id="basis-ko">2026년 7월</span> 기준</span>
+<span>B(Alpha-B)는 S 계열로 집계됩니다</span>
+</div>
+</footer>
+<script>
+const DATA = [{"no":1,"g":"중앙정부","r":null,"n":"대통령실","m":"SP"},{"no":2,"g":"중앙정부","r":null,"n":"대한민국 국회","m":"S"},{"no":3,"g":"중앙정부","r":null,"n":"헌법재판소","m":"IS"},{"no":4,"g":"중앙정부","r":null,"n":"국무총리실","m":"IS"},{"no":5,"g":"중앙정부","r":null,"n":"식품의약품안전처","m":"IS"},{"no":6,"g":"중앙정부","r":null,"n":"금융위원회","m":"I"},{"no":7,"g":"중앙정부","r":null,"n":"국세청","m":"IH"},{"no":8,"g":"중앙정부","r":null,"n":"교육부","m":"S"},{"no":9,"g":"중앙정부","r":null,"n":"교원소청심사위원회","m":"SP"},{"no":10,"g":"중앙정부","r":null,"n":"국립특수교육원","m":"S"},{"no":11,"g":"중앙정부","r":null,"n":"중앙교육연수원","m":"S"},{"no":12,"g":"중앙정부","r":null,"n":"과학기술정보통신부","m":"S"},{"no":13,"g":"중앙정부","r":null,"n":"우정사업본부","m":"P"},{"no":14,"g":"중앙정부","r":null,"n":"외교부","m":"ISP"},{"no":15,"g":"중앙정부","r":null,"n":"통일부","m":"S"},{"no":16,"g":"중앙정부","r":null,"n":"법무부","m":"SP"},{"no":17,"g":"중앙정부","r":null,"n":"검찰청","m":"IS"},{"no":18,"g":"중앙정부","r":null,"n":"고위공직자범죄수사처","m":"IS"},{"no":19,"g":"중앙정부","r":null,"n":"국방부","m":"S"},{"no":20,"g":"중앙정부","r":null,"n":"한미연합군사령부","m":"P"},{"no":21,"g":"중앙정부","r":null,"n":"합동참모본부","m":"IS"},{"no":22,"g":"중앙정부","r":null,"n":"드론작전사령부","m":"IP"},{"no":23,"g":"중앙정부","r":null,"n":"전략사령부","m":"I"},{"no":24,"g":"중앙정부","r":null,"n":"국방부조사본부","m":"I"},{"no":25,"g":"중앙정부","r":null,"n":"육군","m":"IS"},{"no":26,"g":"중앙정부","r":null,"n":"해군","m":"SPHC"},{"no":27,"g":"중앙정부","r":null,"n":"공군","m":"IS"},{"no":28,"g":"중앙정부","r":null,"n":"해병대","m":"ISP"},{"no":29,"g":"중앙정부","r":null,"n":"행정안전부 정부청사관리본부","m":"SPC"},{"no":30,"g":"중앙정부","r":null,"n":"서울청사관리소","m":"C"},{"no":31,"g":"중앙정부","r":null,"n":"행정중심복합도시건설청","m":"S"},{"no":32,"g":"중앙정부","r":null,"n":"경찰청","m":"ISPC"},{"no":33,"g":"중앙정부","r":null,"n":"경찰인재개발원","m":"S"},{"no":34,"g":"중앙정부","r":null,"n":"경찰수사연수원","m":"S"},{"no":35,"g":"중앙정부","r":null,"n":"창경궁 관리소","m":"C"},{"no":36,"g":"중앙정부","r":null,"n":"국가정보자원관리원","m":"SP"},{"no":37,"g":"중앙정부","r":null,"n":"국립중앙도서관","m":"C"},{"no":38,"g":"중앙정부","r":null,"n":"국립중앙박물관","m":"C"},{"no":39,"g":"중앙정부","r":null,"n":"대전청사관리소","m":"P"},{"no":40,"g":"중앙정부","r":null,"n":"대통령기록관","m":"P"},{"no":41,"g":"중앙정부","r":null,"n":"농림축산식품부","m":"S"},{"no":42,"g":"중앙정부","r":null,"n":"농촌진흥청","m":"IS"},{"no":43,"g":"중앙정부","r":null,"n":"국립원예특작과학원","m":"I"},{"no":44,"g":"중앙정부","r":null,"n":"국립농업과학원","m":"I"},{"no":45,"g":"중앙정부","r":null,"n":"산림청","m":"SP"},{"no":46,"g":"중앙정부","r":null,"n":"국립종자원","m":"S"},{"no":47,"g":"중앙정부","r":null,"n":"국립농산물품질관리원","m":"S"},{"no":48,"g":"중앙정부","r":null,"n":"농림축산검역본부","m":"S"},{"no":49,"g":"중앙정부","r":null,"n":"농식품공무원교육원","m":"S"},{"no":50,"g":"중앙정부","r":null,"n":"산업통상부(구. 산업통상자원부)","m":"SP"},{"no":51,"g":"중앙정부","r":null,"n":"보건복지부","m":"IS"},{"no":52,"g":"중앙정부","r":null,"n":"고용노동부","m":"P"},{"no":53,"g":"중앙정부","r":null,"n":"해양수산부","m":"ISC"},{"no":54,"g":"중앙정부","r":null,"n":"해양경찰청","m":"IS"},{"no":55,"g":"중앙정부","r":null,"n":"해양경찰정비창","m":"I"},{"no":56,"g":"중앙정부","r":null,"n":"중앙선거관리위원회","m":"P"},{"no":57,"g":"중앙정부","r":null,"n":"감사원","m":"I"},{"no":58,"g":"공공","r":null,"n":"강원랜드","m":"S"},{"no":59,"g":"공공","r":null,"n":"건강보험심사평가원","m":"S"},{"no":60,"g":"공공","r":null,"n":"건설근로자공제회","m":"S"},{"no":61,"g":"공공","r":null,"n":"게임물관리위원회","m":"S"},{"no":62,"g":"공공","r":null,"n":"국가철도공단","m":"SP"},{"no":63,"g":"공공","r":null,"n":"국립공원공단(덕유산국립공원사무소)","m":"C"},{"no":64,"g":"공공","r":null,"n":"국립농업박물관","m":"S"},{"no":65,"g":"공공","r":null,"n":"국립항공박물관","m":"S"},{"no":66,"g":"공공","r":null,"n":"국민건강보험공단","m":"SH"},{"no":67,"g":"공공","r":null,"n":"국민체육진흥공단","m":"S"},{"no":68,"g":"공공","r":null,"n":"국방과학연구소","m":"I"},{"no":69,"g":"공공","r":null,"n":"국방기술진흥연구소","m":"IS"},{"no":70,"g":"공공","r":null,"n":"국방기술품질원","m":"S"},{"no":71,"g":"공공","r":null,"n":"국토연구원","m":"S"},{"no":72,"g":"공공","r":null,"n":"극지연구소","m":"S"},{"no":73,"g":"공공","r":null,"n":"그랜드코리아레저","m":"S"},{"no":74,"g":"공공","r":null,"n":"농림식품기술기획평가원","m":"S"},{"no":75,"g":"공공","r":null,"n":"대한무역투자진흥공사","m":"IS"},{"no":76,"g":"공공","r":null,"n":"대한석탄공사","m":"S"},{"no":77,"g":"공공","r":null,"n":"대한체육회","m":"C"},{"no":78,"g":"공공","r":null,"n":"한국도로교통공단","m":"SC"},{"no":79,"g":"공공","r":null,"n":"서울교통공사","m":"C"},{"no":80,"g":"공공","r":null,"n":"새만금개발공사","m":"S"},{"no":81,"g":"공공","r":null,"n":"소상공인시장진흥공단","m":"SC"},{"no":82,"g":"공공","r":null,"n":"여수광양항만공사","m":"S"},{"no":83,"g":"공공","r":null,"n":"예술의전당","m":"C"},{"no":84,"g":"공공","r":null,"n":"인천국제공항공사","m":"S"},{"no":85,"g":"공공","r":null,"n":"오송첨단의료산업진흥재단","m":"SC"},{"no":86,"g":"공공","r":null,"n":"무역안보관리원","m":"S"},{"no":87,"g":"공공","r":null,"n":"정보통신산업진흥원","m":"SB"},{"no":88,"g":"공공","r":null,"n":"주택도시보증공사","m":"S"},{"no":89,"g":"공공","r":null,"n":"중소기업중앙회","m":"C"},{"no":90,"g":"공공","r":null,"n":"창업진흥원","m":"C"},{"no":91,"g":"공공","r":null,"n":"코레일네트웍스","m":"S"},{"no":92,"g":"공공","r":null,"n":"한국가스공사","m":"ISP"},{"no":93,"g":"공공","r":null,"n":"한국가스기술공사","m":"S"},{"no":94,"g":"공공","r":null,"n":"한국가스안전공사","m":"S"},{"no":95,"g":"공공","r":null,"n":"한국건설관리공사","m":"S"},{"no":96,"g":"공공","r":null,"n":"한국고용정보원","m":"S"},{"no":97,"g":"공공","r":null,"n":"한국공항공사","m":"S"},{"no":98,"g":"공공","r":null,"n":"한국과학기술연구원","m":"P"},{"no":99,"g":"공공","r":null,"n":"한국관광공사","m":"S"},{"no":100,"g":"공공","r":null,"n":"한국광해광업공단","m":"S"},{"no":101,"g":"공공","r":null,"n":"한국교육학술정보원","m":"S"},{"no":102,"g":"공공","r":null,"n":"한국교통안전공단","m":"S"},{"no":103,"g":"공공","r":null,"n":"한국국토정보공사","m":"S"},{"no":104,"g":"공공","r":null,"n":"한국농수산식품유통공사","m":"S"},{"no":105,"g":"공공","r":null,"n":"한국농어촌공사","m":"S"},{"no":106,"g":"공공","r":null,"n":"한국농업기술진흥원","m":"S"},{"no":107,"g":"공공","r":null,"n":"한국도로공사(성남졸음쉼터)","m":"C"},{"no":108,"g":"공공","r":null,"n":"한국보건의료연구원","m":"I"},{"no":109,"g":"공공","r":null,"n":"한국보건의료인국가시험원","m":"S"},{"no":110,"g":"공공","r":null,"n":"한국산업기술기획평가원","m":"S"},{"no":111,"g":"공공","r":null,"n":"한국산업단지공단","m":"S"},{"no":112,"g":"공공","r":null,"n":"한국생산성본부","m":"C"},{"no":113,"g":"공공","r":null,"n":"한국석유공사","m":"S"},{"no":114,"g":"공공","r":null,"n":"한국소비자원","m":"S"},{"no":115,"g":"공공","r":null,"n":"한국수력원자력","m":"IS"},{"no":116,"g":"공공","r":null,"n":"한국수력원자력 중앙연구원","m":"S"},{"no":117,"g":"공공","r":null,"n":"한국수자원공사","m":"SPC"},{"no":118,"g":"공공","r":null,"n":"한국에너지공단","m":"S"},{"no":119,"g":"공공","r":null,"n":"한국에너지기술평가원","m":"S"},{"no":120,"g":"공공","r":null,"n":"한국원자력안전기술원","m":"S"},{"no":121,"g":"공공","r":null,"n":"한국원자력연구원","m":"P"},{"no":122,"g":"공공","r":null,"n":"한국재료연구원","m":"S"},{"no":123,"g":"공공","r":null,"n":"한국저작권보호원","m":"S"},{"no":124,"g":"공공","r":null,"n":"한국철도공사","m":"IC"},{"no":125,"g":"공공","r":null,"n":"한국전력공사","m":"S"},{"no":126,"g":"공공","r":null,"n":"한국전력기술","m":"P"},{"no":127,"g":"공공","r":null,"n":"한전KDN","m":"SH"},{"no":128,"g":"공공","r":null,"n":"한전KPS","m":"IS"},{"no":129,"g":"공공","r":null,"n":"한전원자력연료","m":"S"},{"no":130,"g":"공공","r":null,"n":"한국남동발전","m":"SC"},{"no":131,"g":"공공","r":null,"n":"한국남부발전","m":"S"},{"no":132,"g":"공공","r":null,"n":"한국동서발전","m":"IS"},{"no":133,"g":"공공","r":null,"n":"한국서부발전","m":"IS"},{"no":134,"g":"공공","r":null,"n":"한국중부발전","m":"SP"},{"no":135,"g":"공공","r":null,"n":"한국전자통신연구원","m":"P"},{"no":136,"g":"공공","r":null,"n":"한국지역난방공사","m":"S"},{"no":137,"g":"공공","r":null,"n":"한국체육산업개발(올림픽공원)","m":"C"},{"no":138,"g":"공공","r":null,"n":"한국탄소산업진흥원","m":"S"},{"no":139,"g":"공공","r":null,"n":"한국토지주택공사","m":"IS"},{"no":140,"g":"공공","r":null,"n":"항공안전기술원","m":"S"},{"no":141,"g":"공공","r":null,"n":"해양환경공단","m":"S"},{"no":142,"g":"지자체","r":"수도권","n":"서울특별시청","m":"ISC"},{"no":143,"g":"지자체","r":"수도권","n":"서울동부 아동보호전문기관","m":"C"},{"no":144,"g":"지자체","r":"수도권","n":"서울특별시립 아동푸른센터","m":"C"},{"no":145,"g":"지자체","r":"수도권","n":"서울특별시립 아동힐링센터","m":"C"},{"no":146,"g":"지자체","r":"수도권","n":"강남구청","m":"S"},{"no":147,"g":"지자체","r":"수도권","n":"강서구청","m":"S"},{"no":148,"g":"지자체","r":"수도권","n":"광진구청","m":"S"},{"no":149,"g":"지자체","r":"수도권","n":"구로구청","m":"C"},{"no":150,"g":"지자체","r":"수도권","n":"노원구청","m":"C"},{"no":151,"g":"지자체","r":"수도권","n":"마포구청","m":"C"},{"no":152,"g":"지자체","r":"수도권","n":"성북구청","m":"S"},{"no":153,"g":"지자체","r":"수도권","n":"송파구청","m":"S"},{"no":154,"g":"지자체","r":"수도권","n":"영등포구청","m":"SC"},{"no":155,"g":"지자체","r":"수도권","n":"용산구청","m":"C"},{"no":156,"g":"지자체","r":"수도권","n":"은평구청","m":"S"},{"no":157,"g":"지자체","r":"수도권","n":"중구청","m":"S"},{"no":158,"g":"지자체","r":"수도권","n":"종로구청","m":"S"},{"no":159,"g":"지자체","r":"수도권","n":"세종문화회관","m":"C"},{"no":160,"g":"지자체","r":"수도권","n":"북서울 꿈의숲 아트센터","m":"C"},{"no":161,"g":"지자체","r":"수도권","n":"경기도청","m":"S"},{"no":162,"g":"지자체","r":"수도권","n":"가평군청","m":"S"},{"no":163,"g":"지자체","r":"수도권","n":"과천시청","m":"S"},{"no":164,"g":"지자체","r":"수도권","n":"광명시청","m":"SC"},{"no":165,"g":"지자체","r":"수도권","n":"광주시청","m":"S"},{"no":166,"g":"지자체","r":"수도권","n":"김포시청","m":"S"},{"no":167,"g":"지자체","r":"수도권","n":"남양주시청","m":"S"},{"no":168,"g":"지자체","r":"수도권","n":"성남시청","m":"S"},{"no":169,"g":"지자체","r":"수도권","n":"수원시청","m":"S"},{"no":170,"g":"지자체","r":"수도권","n":"시흥시청","m":"SP"},{"no":171,"g":"지자체","r":"수도권","n":"안양시청","m":"SC"},{"no":172,"g":"지자체","r":"수도권","n":"양주시청","m":"S"},{"no":173,"g":"지자체","r":"수도권","n":"양평군청","m":"S"},{"no":174,"g":"지자체","r":"수도권","n":"용인시청","m":"S"},{"no":175,"g":"지자체","r":"수도권","n":"여주시청","m":"S"},{"no":176,"g":"지자체","r":"수도권","n":"연천군청","m":"S"},{"no":177,"g":"지자체","r":"수도권","n":"의왕시청","m":"S"},{"no":178,"g":"지자체","r":"수도권","n":"의정부시청","m":"S"},{"no":179,"g":"지자체","r":"수도권","n":"이천시청","m":"S"},{"no":180,"g":"지자체","r":"수도권","n":"파주시청","m":"S"},{"no":181,"g":"지자체","r":"수도권","n":"포천시청","m":"S"},{"no":182,"g":"지자체","r":"수도권","n":"하남시청","m":"S"},{"no":183,"g":"지자체","r":"수도권","n":"화성시청","m":"IS"},{"no":184,"g":"지자체","r":"수도권","n":"경기주택도시공사","m":"C"},{"no":185,"g":"지자체","r":"수도권","n":"인천광역시청","m":"S"},{"no":186,"g":"지자체","r":"수도권","n":"왕산해수욕장","m":"C"},{"no":187,"g":"지자체","r":"충청권","n":"세종특별자치시","m":"P"},{"no":188,"g":"지자체","r":"충청권","n":"대전광역시청","m":"S"},{"no":189,"g":"지자체","r":"충청권","n":"중구청","m":"C"},{"no":190,"g":"지자체","r":"충청권","n":"충청남도청","m":"SC"},{"no":191,"g":"지자체","r":"충청권","n":"충청남도 산림자원연구소","m":"C"},{"no":192,"g":"지자체","r":"충청권","n":"충청남도개발공사","m":"I"},{"no":193,"g":"지자체","r":"충청권","n":"공주시청","m":"S"},{"no":194,"g":"지자체","r":"충청권","n":"논산시청","m":"SC"},{"no":195,"g":"지자체","r":"충청권","n":"보령시청","m":"S"},{"no":196,"g":"지자체","r":"충청권","n":"부여군청","m":"C"},{"no":197,"g":"지자체","r":"충청권","n":"아산시청","m":"SC"},{"no":198,"g":"지자체","r":"충청권","n":"천안시청","m":"S"},{"no":199,"g":"지자체","r":"충청권","n":"충청북도청","m":"S"},{"no":200,"g":"지자체","r":"충청권","n":"괴산군청","m":"S"},{"no":201,"g":"지자체","r":"충청권","n":"단양군청","m":"SP"},{"no":202,"g":"지자체","r":"충청권","n":"보은군청","m":"S"},{"no":203,"g":"지자체","r":"충청권","n":"영동군청","m":"S"},{"no":204,"g":"지자체","r":"충청권","n":"옥천군청","m":"S"},{"no":205,"g":"지자체","r":"충청권","n":"음성군청","m":"S"},{"no":206,"g":"지자체","r":"충청권","n":"진천군청","m":"S"},{"no":207,"g":"지자체","r":"충청권","n":"제천시청","m":"S"},{"no":208,"g":"지자체","r":"충청권","n":"증평군청","m":"S"},{"no":209,"g":"지자체","r":"충청권","n":"청주시청","m":"S"},{"no":210,"g":"지자체","r":"충청권","n":"충주시청","m":"IS"},{"no":211,"g":"지자체","r":"호남권","n":"광주광역시청","m":"S"},{"no":212,"g":"지자체","r":"호남권","n":"광산구청","m":"S"},{"no":213,"g":"지자체","r":"호남권","n":"남구청","m":"S"},{"no":214,"g":"지자체","r":"호남권","n":"전라남도청","m":"SPC"},{"no":215,"g":"지자체","r":"호남권","n":"전남개발공사","m":"I"},{"no":216,"g":"지자체","r":"호남권","n":"고흥군청","m":"C"},{"no":217,"g":"지자체","r":"호남권","n":"대서면사무소","m":"C"},{"no":218,"g":"지자체","r":"호남권","n":"고흥분청문화박물관","m":"C"},{"no":219,"g":"지자체","r":"호남권","n":"곡성군청","m":"S"},{"no":220,"g":"지자체","r":"호남권","n":"광양시청","m":"S"},{"no":221,"g":"지자체","r":"호남권","n":"목포시청","m":"S"},{"no":222,"g":"지자체","r":"호남권","n":"무안군청","m":"S"},{"no":223,"g":"지자체","r":"호남권","n":"보성군청","m":"S"},{"no":224,"g":"지자체","r":"호남권","n":"순천시청","m":"S"},{"no":225,"g":"지자체","r":"호남권","n":"여수시청","m":"S"},{"no":226,"g":"지자체","r":"호남권","n":"영광군청","m":"S"},{"no":227,"g":"지자체","r":"호남권","n":"영암군청","m":"S"},{"no":228,"g":"지자체","r":"호남권","n":"장성군청","m":"S"},{"no":229,"g":"지자체","r":"호남권","n":"진도군청","m":"S"},{"no":230,"g":"지자체","r":"호남권","n":"화순군청","m":"S"},{"no":231,"g":"지자체","r":"호남권","n":"해남군청","m":"S"},{"no":232,"g":"지자체","r":"호남권","n":"전북특별자치도청","m":"P"},{"no":233,"g":"지자체","r":"호남권","n":"김제시청","m":"S"},{"no":234,"g":"지자체","r":"호남권","n":"남원시청","m":"S"},{"no":235,"g":"지자체","r":"호남권","n":"무주군청","m":"S"},{"no":236,"g":"지자체","r":"호남권","n":"완주군청","m":"S"},{"no":237,"g":"지자체","r":"호남권","n":"익산시청","m":"S"},{"no":238,"g":"지자체","r":"호남권","n":"전주시청","m":"P"},{"no":239,"g":"지자체","r":"호남권","n":"정읍시청","m":"S"},{"no":240,"g":"지자체","r":"영남권","n":"부산광역시청","m":"S"},{"no":241,"g":"지자체","r":"영남권","n":"남구청","m":"S"},{"no":242,"g":"지자체","r":"영남권","n":"달성군청","m":"S"},{"no":243,"g":"지자체","r":"영남권","n":"북구청","m":"P"},{"no":244,"g":"지자체","r":"영남권","n":"울산광역시청","m":"SC"},{"no":245,"g":"지자체","r":"영남권","n":"동구청","m":"SC"},{"no":246,"g":"지자체","r":"영남권","n":"울주군청","m":"S"},{"no":247,"g":"지자체","r":"영남권","n":"경산시청","m":"C"},{"no":248,"g":"지자체","r":"영남권","n":"구미시청","m":"C"},{"no":249,"g":"지자체","r":"영남권","n":"청소년수련관","m":"C"},{"no":250,"g":"지자체","r":"영남권","n":"경상남도청","m":"SP"},{"no":251,"g":"지자체","r":"영남권","n":"거제시청","m":"C"},{"no":252,"g":"지자체","r":"영남권","n":"고성군청","m":"S"},{"no":253,"g":"지자체","r":"영남권","n":"사천시청","m":"S"},{"no":254,"g":"지자체","r":"영남권","n":"통영시청","m":"S"},{"no":255,"g":"지자체","r":"영남권","n":"하동군청","m":"SP"},{"no":256,"g":"지자체","r":"영남권","n":"합천군청","m":"S"},{"no":257,"g":"지자체","r":"영남권","n":"경주시청","m":"C"},{"no":258,"g":"지자체","r":"영남권","n":"구미전자정보기술원","m":"C"},{"no":259,"g":"지자체","r":"영남권","n":"성주군청","m":"C"},{"no":260,"g":"지자체","r":"영남권","n":"의성군청","m":"SP"},{"no":261,"g":"지자체","r":"영남권","n":"청송군청","m":"S"},{"no":262,"g":"지자체","r":"영남권","n":"포항중앙상가","m":"C"},{"no":263,"g":"지자체","r":"영남권","n":"평생학습원","m":"C"},{"no":264,"g":"지자체","r":"강원권","n":"강원특별자치도청","m":"P"},{"no":265,"g":"지자체","r":"강원권","n":"강릉시청","m":"SC"},{"no":266,"g":"지자체","r":"강원권","n":"경포대해수욕장","m":"C"},{"no":267,"g":"지자체","r":"강원권","n":"동해시청","m":"P"},{"no":268,"g":"지자체","r":"강원권","n":"양구군청","m":"S"},{"no":269,"g":"지자체","r":"강원권","n":"원주시청","m":"SP"},{"no":270,"g":"지자체","r":"강원권","n":"춘천시청","m":"P"},{"no":271,"g":"지자체","r":"강원권","n":"홍천군청","m":"P"},{"no":272,"g":"지자체","r":"강원권","n":"횡성군청","m":"S"},{"no":273,"g":"지자체 의회","r":"수도권","n":"서울특별시","m":"S"},{"no":274,"g":"지자체 의회","r":"수도권","n":"강서구","m":"S"},{"no":275,"g":"지자체 의회","r":"수도권","n":"경기도","m":"IS"},{"no":276,"g":"지자체 의회","r":"수도권","n":"가평군","m":"S"},{"no":277,"g":"지자체 의회","r":"수도권","n":"광명시","m":"S"},{"no":278,"g":"지자체 의회","r":"수도권","n":"광주시","m":"S"},{"no":279,"g":"지자체 의회","r":"수도권","n":"남양주시","m":"S"},{"no":280,"g":"지자체 의회","r":"수도권","n":"성남시","m":"S"},{"no":281,"g":"지자체 의회","r":"수도권","n":"안양시","m":"S"},{"no":282,"g":"지자체 의회","r":"수도권","n":"양주시","m":"S"},{"no":283,"g":"지자체 의회","r":"수도권","n":"양평군","m":"S"},{"no":284,"g":"지자체 의회","r":"수도권","n":"용인시","m":"S"},{"no":285,"g":"지자체 의회","r":"수도권","n":"의왕시","m":"S"},{"no":286,"g":"지자체 의회","r":"수도권","n":"이천시","m":"S"},{"no":287,"g":"지자체 의회","r":"수도권","n":"포천시","m":"S"},{"no":288,"g":"지자체 의회","r":"충청권","n":"대전광역시","m":"S"},{"no":289,"g":"지자체 의회","r":"충청권","n":"충청남도","m":"S"},{"no":290,"g":"지자체 의회","r":"충청권","n":"공주시","m":"S"},{"no":291,"g":"지자체 의회","r":"충청권","n":"보령시","m":"S"},{"no":292,"g":"지자체 의회","r":"충청권","n":"아산시","m":"S"},{"no":293,"g":"지자체 의회","r":"충청권","n":"천안시","m":"S"},{"no":294,"g":"지자체 의회","r":"충청권","n":"충청북도","m":"S"},{"no":295,"g":"지자체 의회","r":"충청권","n":"단양군","m":"S"},{"no":296,"g":"지자체 의회","r":"충청권","n":"옥천군","m":"S"},{"no":297,"g":"지자체 의회","r":"충청권","n":"음성군","m":"S"},{"no":298,"g":"지자체 의회","r":"충청권","n":"진천군","m":"S"},{"no":299,"g":"지자체 의회","r":"충청권","n":"충주시","m":"S"},{"no":300,"g":"지자체 의회","r":"호남권","n":"전라남도","m":"IC"},{"no":301,"g":"지자체 의회","r":"호남권","n":"무안군","m":"S"},{"no":302,"g":"지자체 의회","r":"호남권","n":"영암군","m":"S"},{"no":303,"g":"지자체 의회","r":"호남권","n":"순천시","m":"S"},{"no":304,"g":"지자체 의회","r":"호남권","n":"진도군","m":"S"},{"no":305,"g":"지자체 의회","r":"호남권","n":"전라북도","m":"SC"},{"no":306,"g":"지자체 의회","r":"호남권","n":"김제시","m":"S"},{"no":307,"g":"지자체 의회","r":"호남권","n":"무주군","m":"S"},{"no":308,"g":"지자체 의회","r":"호남권","n":"익산시","m":"S"},{"no":309,"g":"지자체 의회","r":"호남권","n":"정읍시","m":"S"},{"no":310,"g":"지자체 의회","r":"영남권","n":"부산광역시","m":"S"},{"no":311,"g":"지자체 의회","r":"영남권","n":"울산광역시 울주군","m":"S"},{"no":312,"g":"지자체 의회","r":"영남권","n":"통영시","m":"S"},{"no":313,"g":"지자체 의회","r":"영남권","n":"경상북도","m":"P"},{"no":314,"g":"지자체 의회","r":"영남권","n":"안동시","m":"S"},{"no":315,"g":"지자체 의회","r":"강원권","n":"강릉시","m":"S"},{"no":316,"g":"금융","r":null,"n":"금융감독원","m":"S"},{"no":317,"g":"금융","r":null,"n":"IBK기업은행","m":"SPH"},{"no":318,"g":"금융","r":null,"n":"KB국민은행","m":"SBPH"},{"no":319,"g":"금융","r":null,"n":"한국산업은행(구. KDB산업은행)","m":"SPH"},{"no":320,"g":"금융","r":null,"n":"공무원연금공단","m":"S"},{"no":321,"g":"금융","r":null,"n":"국민연금공단","m":"S"},{"no":322,"g":"금융","r":null,"n":"NH농협은행","m":"PH"},{"no":323,"g":"금융","r":null,"n":"농협중앙회","m":"ISP"},{"no":324,"g":"금융","r":null,"n":"사립학교교직원연금공단","m":"S"},{"no":325,"g":"금융","r":null,"n":"신용보증기금","m":"S"},{"no":326,"g":"금융","r":null,"n":"신한라이프","m":"PH"},{"no":327,"g":"금융","r":null,"n":"신한은행","m":"H"},{"no":328,"g":"금융","r":null,"n":"신한카드","m":"PH"},{"no":329,"g":"금융","r":null,"n":"신한투자증권","m":"H"},{"no":330,"g":"금융","r":null,"n":"예금보험공사","m":"S"},{"no":331,"g":"금융","r":null,"n":"우리은행","m":"PH"},{"no":332,"g":"금융","r":null,"n":"우체국금융개발원","m":"C"},{"no":333,"g":"금융","r":null,"n":"웰컴저축은행","m":"PH"},{"no":334,"g":"금융","r":null,"n":"키움증권","m":"H"},{"no":335,"g":"금융","r":null,"n":"한국무역보험공사","m":"S"},{"no":336,"g":"금융","r":null,"n":"한국수출입은행","m":"IS"},{"no":337,"g":"금융","r":null,"n":"한국은행","m":"S"},{"no":338,"g":"금융","r":null,"n":"한국자산관리공사 캠코","m":"SPH"},{"no":339,"g":"금융","r":null,"n":"한국주택금융공사","m":"S"},{"no":340,"g":"금융","r":null,"n":"한국투자증권","m":"PH"},{"no":341,"g":"금융","r":null,"n":"미래에셋증권","m":"PH"},{"no":342,"g":"금융","r":null,"n":"빗썸","m":"PH"},{"no":343,"g":"금융","r":null,"n":"하나은행","m":"H"},{"no":344,"g":"금융","r":null,"n":"한화손해보험","m":"PH"},{"no":345,"g":"금융","r":null,"n":"BNK금융지주","m":"IP"},{"no":346,"g":"교육","r":null,"n":"경기도교육청 국제교육원","m":"C"},{"no":347,"g":"교육","r":null,"n":"경기도교육청 북부연수원","m":"C"},{"no":348,"g":"교육","r":null,"n":"경기도교육청 남부유아체험교육원","m":"C"},{"no":349,"g":"교육","r":null,"n":"경기도교육청 안양과천교육지원청","m":"C"},{"no":350,"g":"교육","r":null,"n":"경기도교육청 율곡연수원","m":"C"},{"no":351,"g":"교육","r":null,"n":"경기도교육청 남부연수원","m":"C"},{"no":352,"g":"교육","r":null,"n":"경기도교육청 학생교육원","m":"C"},{"no":353,"g":"교육","r":null,"n":"경기도교육청 가평교육지원청","m":"C"},{"no":354,"g":"교육","r":null,"n":"경기도교육청 경기도여주교육지원청","m":"C"},{"no":355,"g":"교육","r":null,"n":"경기도교육청 파주교육지원청","m":"C"},{"no":356,"g":"교육","r":null,"n":"경기도교육청 경기도포천교육지원청","m":"C"},{"no":357,"g":"교육","r":null,"n":"경기도교육청 평택교육지원청","m":"C"},{"no":358,"g":"교육","r":null,"n":"경기도교육청 김포도서관","m":"C"},{"no":359,"g":"교육","r":null,"n":"경기도교육청 미디어교육센터","m":"C"},{"no":360,"g":"교육","r":null,"n":"경기도교육청 성남도서관","m":"C"},{"no":361,"g":"교육","r":null,"n":"경기도교육청 포천도서관","m":"C"},{"no":362,"g":"교육","r":null,"n":"경기도교육청 화성도서관","m":"C"},{"no":363,"g":"교육","r":null,"n":"경상북도 교육청","m":"S"},{"no":364,"g":"교육","r":null,"n":"광주광역시 교육청","m":"S"},{"no":365,"g":"교육","r":null,"n":"대전광역시 교육청","m":"P"},{"no":366,"g":"교육","r":null,"n":"부산광역시 교육청","m":"S"},{"no":367,"g":"교육","r":null,"n":"서울특별시 교육청","m":"I"},{"no":368,"g":"교육","r":null,"n":"세종특별자치시 교육청","m":"S"},{"no":369,"g":"교육","r":null,"n":"울산광역시 교육청","m":"C"},{"no":370,"g":"교육","r":null,"n":"인천광역시 교육청","m":"S"},{"no":371,"g":"교육","r":null,"n":"전라남도 교육청","m":"S"},{"no":372,"g":"교육","r":null,"n":"충청남도 교육청","m":"S"},{"no":373,"g":"교육","r":null,"n":"충청북도 교육청","m":"S"},{"no":374,"g":"교육","r":null,"n":"대구교육해양수련원","m":"C"},{"no":375,"g":"교육","r":null,"n":"가톨릭대학교","m":"C"},{"no":376,"g":"교육","r":null,"n":"광주과학기술원","m":"C"},{"no":377,"g":"교육","r":null,"n":"국립강릉원주대학교","m":"C"},{"no":378,"g":"교육","r":null,"n":"경기과학기술대학교","m":"C"},{"no":379,"g":"교육","r":null,"n":"경북대학교","m":"C"},{"no":380,"g":"교육","r":null,"n":"경산여자중학교","m":"C"},{"no":381,"g":"교육","r":null,"n":"고려대학교","m":"C"},{"no":382,"g":"교육","r":null,"n":"국립공주대학교","m":"C"},{"no":383,"g":"교육","r":null,"n":"국립금오공과대학교","m":"C"},{"no":384,"g":"교육","r":null,"n":"국민대학교","m":"C"},{"no":385,"g":"교육","r":null,"n":"군산대학교","m":"C"},{"no":386,"g":"교육","r":null,"n":"동서울대학교","m":"C"},{"no":387,"g":"교육","r":null,"n":"부산대학교","m":"C"},{"no":388,"g":"교육","r":null,"n":"서울대학교","m":"C"},{"no":389,"g":"교육","r":null,"n":"세종공동캠퍼스","m":"C"},{"no":390,"g":"교육","r":null,"n":"이화여자대학교","m":"C"},{"no":391,"g":"교육","r":null,"n":"안동여자고등학교","m":"C"},{"no":392,"g":"교육","r":null,"n":"용인대학교","m":"C"},{"no":393,"g":"교육","r":null,"n":"장산중학교","m":"C"},{"no":394,"g":"교육","r":null,"n":"전남대학교","m":"C"},{"no":395,"g":"교육","r":null,"n":"전북대학교","m":"C"},{"no":396,"g":"교육","r":null,"n":"제주고등학교","m":"C"},{"no":397,"g":"교육","r":null,"n":"제주대학교","m":"C"},{"no":398,"g":"교육","r":null,"n":"중앙대학교","m":"IC"},{"no":399,"g":"교육","r":null,"n":"충남대학교","m":"C"},{"no":400,"g":"교육","r":null,"n":"포항여자고등학교","m":"C"},{"no":401,"g":"교육","r":null,"n":"한경대학교","m":"C"},{"no":402,"g":"교육","r":null,"n":"한국기술교육대학교","m":"C"},{"no":403,"g":"교육","r":null,"n":"한국농수산대학교","m":"S"},{"no":404,"g":"교육","r":null,"n":"한국방송통신대학교","m":"C"},{"no":405,"g":"교육","r":null,"n":"한국에너지공과대학교","m":"C"},{"no":406,"g":"교육","r":null,"n":"한국체육대학교","m":"C"},{"no":407,"g":"교육","r":null,"n":"한국폴리텍대학","m":"S"},{"no":408,"g":"교육","r":null,"n":"한양대학교","m":"C"},{"no":409,"g":"교육","r":null,"n":"한림고등학교","m":"C"},{"no":410,"g":"교육","r":null,"n":"서울교육대학교","m":"C"},{"no":411,"g":"교육","r":null,"n":"삼육대학교","m":"C"},{"no":412,"g":"교육","r":null,"n":"인천성동학교","m":"C"},{"no":413,"g":"교육","r":null,"n":"강원대학교","m":"C"},{"no":414,"g":"교육","r":null,"n":"동국대학교","m":"C"},{"no":415,"g":"민간","r":null,"n":"","m":"PH"},{"no":416,"g":"민간","r":null,"n":"","m":"SHC"},{"no":417,"g":"민간","r":null,"n":"","m":"S"},{"no":418,"g":"민간","r":null,"n":"","m":"S"},{"no":419,"g":"민간","r":null,"n":"","m":"S"},{"no":420,"g":"민간","r":null,"n":"","m":"SP"},{"no":421,"g":"민간","r":null,"n":"","m":"SP"},{"no":422,"g":"민간","r":null,"n":"","m":"S"},{"no":423,"g":"민간","r":null,"n":"","m":"S"},{"no":424,"g":"민간","r":null,"n":"","m":"SH"},{"no":425,"g":"민간","r":null,"n":"","m":"I"},{"no":426,"g":"민간","r":null,"n":"","m":"S"},{"no":427,"g":"민간","r":null,"n":"","m":"IS"},{"no":428,"g":"민간","r":null,"n":"","m":"S"},{"no":429,"g":"민간","r":null,"n":"","m":"S"},{"no":430,"g":"민간","r":null,"n":"","m":"C"},{"no":431,"g":"민간","r":null,"n":"","m":"S"},{"no":432,"g":"민간","r":null,"n":"","m":"S"},{"no":433,"g":"민간","r":null,"n":"","m":"IC"},{"no":434,"g":"민간","r":null,"n":"","m":"S"},{"no":435,"g":"민간","r":null,"n":"","m":"BC"},{"no":436,"g":"민간","r":null,"n":"","m":"IS"},{"no":437,"g":"민간","r":null,"n":"","m":"B"},{"no":438,"g":"민간","r":null,"n":"","m":"H"},{"no":439,"g":"민간","r":null,"n":"","m":"SB"},{"no":440,"g":"민간","r":null,"n":"","m":"S"},{"no":441,"g":"민간","r":null,"n":"","m":"C"},{"no":442,"g":"민간","r":null,"n":"","m":"S"},{"no":443,"g":"민간","r":null,"n":"","m":"SP"},{"no":444,"g":"민간","r":null,"n":"","m":"C"},{"no":445,"g":"민간","r":null,"n":"","m":"P"},{"no":446,"g":"민간","r":null,"n":"","m":"S"},{"no":447,"g":"민간","r":null,"n":"","m":"S"},{"no":448,"g":"민간","r":null,"n":"","m":"S"},{"no":449,"g":"민간","r":null,"n":"","m":"S"},{"no":450,"g":"민간","r":null,"n":"","m":"S"},{"no":451,"g":"민간","r":null,"n":"","m":"SH"},{"no":452,"g":"민간","r":null,"n":"","m":"S"},{"no":453,"g":"민간","r":null,"n":"","m":"C"},{"no":454,"g":"민간","r":null,"n":"","m":"S"},{"no":455,"g":"민간","r":null,"n":"","m":"S"},{"no":456,"g":"민간","r":null,"n":"","m":"C"},{"no":457,"g":"민간","r":null,"n":"","m":"C"},{"no":458,"g":"민간","r":null,"n":"","m":"S"},{"no":459,"g":"민간","r":null,"n":"","m":"S"},{"no":460,"g":"민간","r":null,"n":"","m":"C"},{"no":461,"g":"민간","r":null,"n":"","m":"C"},{"no":462,"g":"민간","r":null,"n":"","m":"P"},{"no":463,"g":"민간","r":null,"n":"","m":"C"},{"no":464,"g":"민간","r":null,"n":"","m":"C"},{"no":465,"g":"민간","r":null,"n":"","m":"P"},{"no":466,"g":"민간","r":null,"n":"","m":"C"},{"no":467,"g":"민간","r":null,"n":"","m":"I"},{"no":468,"g":"민간","r":null,"n":"","m":"C"},{"no":469,"g":"민간","r":null,"n":"","m":"I"},{"no":470,"g":"민간","r":null,"n":"","m":"I"},{"no":471,"g":"민간","r":null,"n":"","m":"P"},{"no":472,"g":"민간","r":null,"n":"","m":"C"},{"no":473,"g":"민간","r":null,"n":"","m":"IP"},{"no":474,"g":"민간","r":null,"n":"","m":"C"},{"no":475,"g":"해외","r":null,"n":"미국","m":"H"},{"no":476,"g":"해외","r":null,"n":"중국","m":"D"},{"no":477,"g":"해외","r":null,"n":"영국","m":"H"},{"no":478,"g":"해외","r":null,"n":"사우디아라비아","m":"D"},{"no":479,"g":"해외","r":null,"n":"폴란드","m":"D"},{"no":480,"g":"해외","r":null,"n":"UAE","m":"D"},{"no":481,"g":"해외","r":null,"n":"싱가포르","m":"DPH"},{"no":482,"g":"해외","r":null,"n":"말레이시아","m":"DPH"},{"no":483,"g":"해외","r":null,"n":"멕시코","m":"D"},{"no":484,"g":"해외","r":null,"n":"모잠비크","m":"P"},{"no":485,"g":"해외","r":null,"n":"베트남","m":"P"},{"no":486,"g":"해외","r":null,"n":"카타르","m":"D"},{"no":487,"g":"해외","r":null,"n":"캄보디아","m":"D"},{"no":488,"g":"해외","r":null,"n":"보츠와나","m":"DPH"},{"no":489,"g":"해외","r":null,"n":"인도네시아","m":"D"},{"no":490,"g":"해외","r":null,"n":"태국","m":"D"},{"no":491,"g":"해외","r":null,"n":"튀르키예","m":"D"},{"no":492,"g":"해외","r":null,"n":"스페인","m":"D"}];
+const PRODUCTS = [
+['I','Alpha-I'],['S','Alpha-S'],['B','Alpha-B'],['D','Smart-D'],['P','Alpha-P'],['H','Alpha-H'],['C','Alpha-C']
+];
+const PNAME = Object.fromEntries(PRODUCTS);
+const CATS = ['중앙정부','공공','지자체','지자체 의회','금융','교육','해외','민간'];
+const REGIONS = ['수도권','충청권','호남권','영남권','강원권'];
+const FLAG = {'말레이시아':'🇲🇾','멕시코':'🇲🇽','모잠비크':'🇲🇿','미국':'🇺🇸','베트남':'🇻🇳','보츠와나':'🇧🇼','사우디아라비아':'🇸🇦','스페인':'🇪🇸','싱가포르':'🇸🇬','아랍에미리트':'🇦🇪','영국':'🇬🇧','인도네시아':'🇮🇩','중국':'🇨🇳','카타르':'🇶🇦','캄보디아':'🇰🇭','태국':'🇹🇭','튀르키예':'🇹🇷','폴란드':'🇵🇱'};
+const state = { products: new Set(), cats: new Set(), q: '' };
+// ── helpers ──────────────────────────────────────────
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const matchProducts = row => state.products.size === 0 || [...state.products].some(p => row.m.includes(p));
+const matchQuery = row => !state.q || row.n.toLowerCase().includes(state.q);
+const matchCat = row => state.cats.size === 0 || state.cats.has(row.g);
+const monogram = r => {
+const name = r.n;
+if (r.logo) return `<img class="logo img" src="${r.logo}" alt="" loading="lazy">`;
+if (FLAG[name]) return `<div class="logo flag" aria-hidden="true">${FLAG[name]}</div>`;
+const latin = name.match(/^[A-Za-z&]{1,3}/);
+const txt = latin ? latin[0].toUpperCase().slice(0,2) : name.slice(0,1);
+return `<div class="logo" aria-hidden="true">${esc(txt)}</div>`;
+};
+const markHtml = m => [...m].map(p => `<span class="mk mk-${p}${state.products.size && !state.products.has(p) ? ' dim' : ''}" title="${PNAME[p]}">${p}</span>`).join('');
+// ── render: product tiles (counts respect category + search, not product) ──
+function renderTiles(){
+const base = DATA.filter(r => matchCat(r) && matchQuery(r));
+const tiles = document.getElementById('tiles');
+tiles.innerHTML = PRODUCTS.map(([p, name]) => {
+const n = base.filter(r => r.m.includes(p)).length;
+const on = state.products.has(p);
+return `<button class="tile mk-${p}${n===0?' zero':''}" type="button" data-p="${p}" aria-pressed="${on}">
+<span class="mk mk-${p}">${p}</span>
+<span><span class="t-name">${name}</span><br><span class="t-count">${n}<small>개사</small></span></span>
+</button>`;
+}).join('');
+document.getElementById('clear-products').classList.toggle('show', state.products.size > 0);
+}
+// ── render: category tabs (counts respect product + search) ──
+function renderTabs(){
+const base = DATA.filter(r => matchProducts(r) && matchQuery(r));
+const tabs = document.getElementById('tabs');
+const items = ['전체', ...CATS];
+tabs.innerHTML = items.map(c => {
+const n = c === '전체' ? base.length : base.filter(r => r.g === c).length;
+const on = c === '전체' ? state.cats.size === 0 : state.cats.has(c);
+return `<button class="tab${n===0?' zero':''}" type="button" data-c="${c}" aria-pressed="${on}"><b>${c}</b><span class="n">${n}</span></button>`;
+}).join('');
+}
+// ── render: sections ──
+function renderSections(){
+const rows = DATA.filter(r => matchProducts(r) && matchQuery(r) && matchCat(r));
+const filtered = state.products.size > 0 || state.q;
+const host = document.getElementById('sections');
+// summary
+const sum = document.getElementById('summary');
+const parts = [];
+if (state.products.size) parts.push([...state.products].map(p => PNAME[p]).join(', ') + ' 납품');
+if (state.cats.size) parts.push(CATS.filter(c => state.cats.has(c)).join(', '));
+if (state.q) parts.push(`"${esc(state.q)}"`);
+sum.innerHTML = parts.length
+? `<b>${rows.length}</b>개 기관 · ${parts.join(' · ')}`
+: `전체 <b>${DATA.length}</b>개 기관`;
+if (rows.length === 0) {
+host.innerHTML = `<div class="empty"><p>조건에 맞는 기관이 없습니다.</p><button type="button" id="reset-all">모든 필터 지우기</button></div>`;
+return;
+}
+const cats = state.cats.size ? CATS.filter(c => state.cats.has(c)) : CATS;
+host.innerHTML = cats.map(c => {
+const list = rows.filter(r => r.g === c);
+if (list.length === 0) return '';
+const total = DATA.filter(r => r.g === c).length;
+const head = `<h2>${c} <span class="n">${list.length}</span>${filtered && list.length !== total ? `<span class="of">/ ${total}</span>` : ''}</h2>`;
+// 온라인 공개용: 민간 사명이 비어 있으면 개수·제품별 수만 표시
+if (c === '민간' && list.every(r => !r.n)) {
+const byP = PRODUCTS.map(([p,name]) => [p, name, list.filter(r => r.m.includes(p)).length]).filter(x => x[2] > 0);
+return `<section class="section" id="cat-${c}">${head}<div class="confidential">
+<div><b>민간 기업 ${list.length}개사</b><br>계약 조건에 따라 사명은 공개하지 않습니다.</div>
+<div class="pc">${byP.map(([p,name,n]) => `<span><span class="mk mk-${p}">${p}</span>${name} <span class="n">${n}</span></span>`).join('')}</div>
+</div></section>`;
+}
+let body;
+if (c === '지자체' || c === '지자체 의회') {
+body = REGIONS.map(rg => {
+const sub = list.filter(r => r.r === rg);
+if (!sub.length) return '';
+return `<div class="region"><h3>${rg} <span class="n">${sub.length}</span></h3><div class="grid">${sub.map(cell).join('')}</div></div>`;
+}).join('');
+} else {
+body = `<div class="grid">${list.map(cell).join('')}</div>`;
+}
+return `<section class="section" id="cat-${c}">${head}${body}</section>`;
+}).join('');
+}
+function cell(r){
+return `<article class="cell">${monogram(r)}<h4 class="name">${esc(r.n)}</h4><div class="marks">${markHtml(r.m)}</div></article>`;
+}
+function render(){ renderTiles(); renderTabs(); renderSections(); syncHash(); }
+// ── URL state (shareable) ──
+function syncHash(){
+const p = new URLSearchParams();
+if (state.products.size) p.set('p', [...state.products].join(''));
+if (state.cats.size) p.set('c', CATS.filter(c => state.cats.has(c)).join(','));
+if (state.q) p.set('q', state.q);
+const h = p.toString();
+try { history.replaceState(null, '', h ? '#' + h : location.pathname + location.search); } catch(e) {}
+}
+function readHash(){
+let p; try { p = new URLSearchParams(location.hash.slice(1)); } catch(e) { return; }
+const ps = p.get('p') || '';
+[...ps].forEach(x => { if (PNAME[x]) state.products.add(x); });
+(p.get('c') || '').split(',').forEach(c => { if (CATS.includes(c)) state.cats.add(c); });
+const q = p.get('q'); if (q) { state.q = q.toLowerCase(); document.getElementById('q').value = q; }
+}
+// ── events ──
+document.getElementById('tiles').addEventListener('click', e => {
+const b = e.target.closest('.tile'); if (!b) return;
+const p = b.dataset.p;
+state.products.has(p) ? state.products.delete(p) : state.products.add(p);
+render();
+});
+document.getElementById('clear-products').addEventListener('click', () => { state.products.clear(); render(); });
+document.getElementById('tabs').addEventListener('click', e => {
+const b = e.target.closest('.tab'); if (!b) return;
+const c = b.dataset.c;
+if (c === '전체') state.cats.clear();
+else state.cats.has(c) ? state.cats.delete(c) : state.cats.add(c);
+render();
+window.scrollTo({ top: document.querySelector('.catbar').offsetTop, behavior: 'auto' });
+});
+document.getElementById('q').addEventListener('input', e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+document.getElementById('sections').addEventListener('click', e => {
+if (e.target.id === 'reset-all') {
+state.products.clear(); state.cats.clear(); state.q = ''; document.getElementById('q').value = '';
+render();
+}
+});
+document.getElementById('total-count').textContent = DATA.length;
+readHash();
+render();
+</script>
+</body>
+</html>
